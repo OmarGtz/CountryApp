@@ -1,4 +1,6 @@
-package com.example.countryapp
+package com.example.countryapp.model
+
+import com.example.countryapp.R
 
 /**
  * DataStore
@@ -14,5 +16,4 @@ object DataStore {
         Country("Mexico", R.drawable.ic_mexico),
         Country("Italia", R.drawable.ic_mexico)
     )
-
 }

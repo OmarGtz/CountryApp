@@ -1,10 +1,12 @@
-package com.example.countryapp
+package com.example.countryapp.view.viewholder
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.countryapp.R
+import com.example.countryapp.model.Country
 
 /**
  * CountryViewHolder
@@ -21,9 +23,11 @@ class CountryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         imageView = view.findViewById(R.id.flag_image)
     }
 
-    fun bind(country: Country) {
+    fun bind(country: Country, onClickEvent: (Country) -> Unit) {
+        itemView.setOnClickListener {
+            onClickEvent(country)
+        }
         nameTextView.text = country.name
         imageView.setImageDrawable(ContextCompat.getDrawable(itemView.context, country.flag))
     }
-
 }

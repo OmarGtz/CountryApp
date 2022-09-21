@@ -1,4 +1,4 @@
-package com.example.countryapp
+package com.example.countryapp.model
 
 /**
  * Country
